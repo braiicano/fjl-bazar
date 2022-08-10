@@ -9,15 +9,24 @@
   font-size: var(--font);
   box-sizing: border-box;
   color: #fff;
+  text-shadow: 1px 1px 5px #000;
 }
 h1{
   margin: 0 0 5%;
   font-size: 400%;
 }
 h2{font-size: 300%;}
-p{font-size: 200%;}
-a,b{font-size: inherit;}
-
+h3{font-size: 250%;}
+h4{font-size: 180%;}
+p{
+  margin: 1% 0;
+  font-size: 200%;
+}
+a,b,i{
+  font-size: inherit;
+  text-decoration: none;
+}
+ul,li{list-style: none;}
 body{
   background: linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.7)),url('/img/bg.jpg') fixed no-repeat center 0;
   background-size: cover;
@@ -25,6 +34,10 @@ body{
 img{
   width: 100%;
   height: 100%;
+}
+img:hover{
+  filter: drop-shadow(1px 1px 6px #fff);
+  transition-duration: .4s;
 }
 .header{
   position: fixed;
@@ -62,12 +75,35 @@ img{
     margin: 0 0 .5%;
   }
 #footer>span{font-size: 150%;}
+.title{
+  font-size: inherit;
+  text-shadow: 1px 1px 5px #fff;
+  color:#f00;
+}
+.list-container{
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  margin: 5% 0;
+}
+.fa-brands,.fa-solid{
+  font-size:150%;
+  text-shadow: .5px .5px 5px #bbb
+}
+.fa-whatsapp{color:#0f0}
+.fa-facebook{color:#00f}
+.fa-instagram{color:#f08}
+.fa-linkedin{color:#00f}
+.fa-phone{color:#2a2}
+.fa-envelope{color:#555}
 
 @media screen and (min-width: 800px) and (min-height: 400px){
   h1{font-size: 3vw;}
   h2{font-size: 2.2vw;}
+  h3{font-size: 1.9vw;}
+  h4{font-size: 1.3vw;}
   p{font-size: 1.7vw;}
-  b{font-size: inherit;}
+  a,b,i{font-size: inherit;}
 
   .logo{
     width: 9%;
@@ -79,10 +115,9 @@ img{
 
   }
   .container{
+    height: 100%;
     padding: 3% 10%;
     margin: auto; 
-  }
-  #services,#contact{
   }
   #footer{
     width: 100%;
@@ -90,4 +125,15 @@ img{
     bottom: 0;
     margin: 0 auto;
   }
+  #footer>p{margin:0}
+
+  .fa-whatsapp,.fa-facebook,.fa-instagram,.fa-linkedin,.fa-phone,.fa-envelope{color: #333}
+  .fa-whatsapp:hover{color:#0f0}
+  .fa-facebook:hover{color:#00f}
+  .fa-instagram:hover{color:#f08}
+  .fa-linkedin:hover{color:#00f}
+  .fa-phone:hover{color:#2a2}
+  .fa-envelope:hover{color:#555}
+
+
 }
